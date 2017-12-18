@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ynov student admin</title>
+    <link href="{% static 'materialize/css/materialize.min.css' %}" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Administration</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    {% block content %} {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static 'materialize/js/materialize.min.js' %}"></script>
+
+</body>
+
+</html>
