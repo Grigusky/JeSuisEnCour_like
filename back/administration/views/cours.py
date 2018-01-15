@@ -5,11 +5,16 @@ from django.shortcuts import render
 # Create your views here.
 
 def cours_index(request):
-    context = {}
+    cours = Cour.objects.all()
+    context = {'cours': cours}
     return render(request, 'cours_index.html', context)
 
 
 def cours_search(request):
+    try:
+        cours = Cours.objects.filter()
+    except:
+        cours = Cours.objects.all()
     context = {}
     return render(request, 'cours_search.html', context)
 

@@ -5,11 +5,16 @@ from django.shortcuts import render
 # Create your views here.
 
 def prof_index(request):
+    prof = Prof.objects.all()
     context = {}
     return render(request, 'prof_index.html', context)
 
 
 def prof_search(request):
+    try:
+        prof = Prof.objects.filter()
+    except:
+        prof = Prof.objects.all()
     context = {}
     return render(request, 'prof_search.html', context)
 
