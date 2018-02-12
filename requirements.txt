@@ -2,3 +2,4 @@ django
 djangorestframework
 mysqlclient
 pytest
+pytest-django
