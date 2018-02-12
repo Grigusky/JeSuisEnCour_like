@@ -1,19 +1,10 @@
 # coding: utf8
-#v1.1
-#v1.2
-#v1.3 aka hardy zoophile
-#v1.4 aka cochounou valentine
-#v1.5 aka couscous merguez
-#v1.6 aka malibu goldorak
-#v1.7 aka kerosene underscore
-#v1.8 aka wrecked papillon
-#v1.9 aka asperger dentifrice
-#v1.10 aka gianduja ‘rdin
-#v1.11 aka suzuki master flash
 
 from django.conf.urls import include, url
 from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+from .views import *
 
 
 app_name = 'forti'
@@ -49,6 +40,27 @@ urlpatterns = [
         url(r'^cours/delete/$',views.cours_delete, name='delete'),
         url(r'^salle/delete/$',views.salle_delete, name='delete'),
         url(r'^specialite/delete/$',views.specialite_delete, name='delete'),
+        #api
+        #list
+        url(r'^api/eleve/list$', ElevesApi.as_view(), name="api eleve"),
+        url(r'^api/specialite/list$', SpecialiteApi.as_view(), name="api eleve"),
+        url(r'^api/specialite_eleve/list$', Specialite_EleveApi.as_view(), name="api eleve"),
+        url(r'^api/absences_eleve/list$', Absences_EleveApi.as_view(), name="api eleve"),
+        url(r'^api/prof/list$', ProfApi.as_view(), name="api eleve"),
+        url(r'^api/prof_promotion/list$', Prof_PromotionApi.as_view(), name="api eleve"),
+        url(r'^api/absences_prof/list$', Absences_ProfApi.as_view(), name="api eleve"),
+        url(r'^api/cours/list$', CoursApi.as_view(), name="api eleve"),
+        url(r'^api/promotions/list$', PromotionsApi.as_view(), name="api eleve"),
+        # Create
+        url(r'^api/eleve/create/$', ElevesCreateApi.as_view(), name="api create eleve"),
+        url(r'^api/specialite/create/$', SpecialiteCreateApi.as_view(), name="api create eleve"),
+        url(r'^api/specialite_eleve/create/$', Specialite_EleveCreateApi.as_view(), name="api create eleve"),
+        url(r'^api/absences_eleve/create/$', Absences_EleveCreateApi.as_view(), name="api create eleve"),
+        url(r'^api/prof/create/$', ProfCreateApi.as_view(), name="api create eleve"),
+        url(r'^api/prof_promotion/create/$', Prof_PromotionCreateApi.as_view(), name="api create eleve"),
+        url(r'^api/absences_prof/create/$', Absences_ProfCreateApi.as_view(), name="api create eleve"),
+        url(r'^api/cours/create/$', CoursCreateApi.as_view(), name="api create eleve"),
+        url(r'^api/promotions/create/$', PromotionsCreateApi.as_view(), name="api create eleve")
 ]
 
 urlpatterns += staticfiles_urlpatterns()
