@@ -1,3 +1,9 @@
+Back, partie django
+===================
+
+### en local sur ton pc
+
+
 Procédure pour lancer le back de la copie de je suis en cour:
 
 dans un premier temps installer python (version 3):
@@ -25,3 +31,16 @@ Pour lancer le serveur, je t’invite à te diriger dans la directory ou est pr�
 si tu veux lancer des migrations, tu fais un :
     
     -     python manage.py makemigrations && python manage.py migrate
+
+### en direct sur le serveur
+
+le projet sur le serveur tourne directement en instance docker.
+
+si tu veux le lancer je t'invite à effectuer les actions disponnible dans la partie suivante
+
+
+
+Back, partie scripté
+====================
+
+pour la partie scripté du projet il vous suffit de lancer le script main.
