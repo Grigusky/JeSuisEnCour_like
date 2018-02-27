@@ -29,7 +29,7 @@ class Specialite_Eleve(models.Model):
     specialite = models.ForeignKey('Specialite',on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.nom
+        return self.eleve
 
 
 class Absences_Eleve(models.Model):
