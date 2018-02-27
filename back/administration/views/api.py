@@ -30,7 +30,7 @@ class ElevesUpdateApi(UpdateAPIView):
     lookup_field = 'nom'
 
 
-class ElevesUpdateApi(RetrieveAPIView):
+class ElevesSearchApi(RetrieveAPIView):
     queryset = Eleves.objects.all()
     serializer_class = ElevesSerializer
     lookup_field = 'nom'
@@ -63,13 +63,13 @@ class SpecialiteUpdateApi(UpdateAPIView):
     lookup_field = 'nom'
 
 
-class SpecialiteUpdateApi(RetrieveAPIView):
+class SpecialiteSearchApi(RetrieveAPIView):
     queryset = Specialite.objects.all()
     serializer_class = SpecialiteSerializer
     lookup_field = 'nom'
 
 
-class SpecialiteUpdateApi(DestroyAPIView):
+class SpecialiteDeleteApi(DestroyAPIView):
     queryset = Specialite.objects.all()
     serializer_class = SpecialiteSerializer
     lookup_field = 'nom'
@@ -96,13 +96,13 @@ class Specialite_EleveUpdateApi(UpdateAPIView):
     lookup_field = 'eleve'
 
 
-class Specialite_EleveUpdateApi(RetrieveAPIView):
+class Specialite_EleveSearchApi(RetrieveAPIView):
     queryset = Specialite_Eleve.objects.all()
     serializer_class = Specialite_EleveSerializer
     lookup_field = 'eleve'
 
 
-class Specialite_EleveUpdateApi(DestroyAPIView):
+class Specialite_EleveDeleteApi(DestroyAPIView):
     queryset = Specialite_Eleve.objects.all()
     serializer_class = Specialite_EleveSerializer
     lookup_field = 'eleve'
@@ -129,13 +129,13 @@ class Absences_EleveUpdateApi(UpdateAPIView):
     lookup_field = 'eleve'
 
 
-class Absences_EleveUpdateApi(RetrieveAPIView):
+class Absences_EleveSearchApi(RetrieveAPIView):
     queryset = Absences_Eleve.objects.all()
     serializer_class = Absences_EleveSerializer
     lookup_field = 'eleve'
 
 
-class Absences_EleveUpdateApi(DestroyAPIView):
+class Absences_EleveDeleteApi(DestroyAPIView):
     queryset = Absences_Eleve.objects.all()
     serializer_class = Absences_EleveSerializer
     lookup_field = 'eleve'
@@ -162,13 +162,13 @@ class ProfUpdateApi(UpdateAPIView):
     lookup_field = 'nom'
 
 
-class ProfUpdateApi(RetrieveAPIView):
+class ProfSearchApi(RetrieveAPIView):
     queryset = Prof.objects.all()
     serializer_class = ProfSerializer
     lookup_field = 'nom'
 
 
-class ProfUpdateApi(DestroyAPIView):
+class ProfDeleteApi(DestroyAPIView):
     queryset = Prof.objects.all()
     serializer_class = ProfSerializer
     lookup_field = 'nom'
@@ -195,13 +195,13 @@ class Prof_PromotionUpdateApi(UpdateAPIView):
     lookup_field = 'prof'
 
 
-class Prof_PromotionUpdateApi(RetrieveAPIView):
+class Prof_PromotionSearchApi(RetrieveAPIView):
     queryset = Prof_Promotion.objects.all()
     serializer_class = Prof_PromotionSerializer
     lookup_field = 'prof'
 
 
-class Prof_PromotionUpdateApi(DestroyAPIView):
+class Prof_PromotionDeleteApi(DestroyAPIView):
     queryset = Prof_Promotion.objects.all()
     serializer_class = Prof_PromotionSerializer
     lookup_field = 'prof'
@@ -228,13 +228,13 @@ class Absences_ProfUpdateApi(UpdateAPIView):
     lookup_field = 'prof'
 
 
-class Absences_ProfUpdateApi(RetrieveAPIView):
+class Absences_ProfSearchApi(RetrieveAPIView):
     queryset = Absences_Prof.objects.all()
     serializer_class = Absences_ProfSerializer
     lookup_field = 'prof'
 
 
-class Absences_ProfUpdateApi(DestroyAPIView):
+class Absences_ProfDeleteApi(DestroyAPIView):
     queryset = Absences_Prof.objects.all()
     serializer_class = Absences_ProfSerializer
     lookup_field = 'prof'
@@ -261,13 +261,13 @@ class CoursUpdateApi(UpdateAPIView):
     lookup_field = 'intitule'
 
 
-class CoursUpdateApi(RetrieveAPIView):
+class CoursSearchApi(RetrieveAPIView):
     queryset = Cours.objects.all()
     serializer_class = CoursSerializer
     lookup_field = 'intitule'
 
 
-class CoursUpdateApi(DestroyAPIView):
+class CoursDeleteApi(DestroyAPIView):
     queryset = Cours.objects.all()
     serializer_class = CoursSerializer
     lookup_field = 'intitule'
@@ -294,13 +294,13 @@ class PromotionsUpdateApi(UpdateAPIView):
     lookup_field = 'name'
 
 
-class PromotionsUpdateApi(RetrieveAPIView):
+class PromotionsSearchApi(RetrieveAPIView):
     queryset = Promotions.objects.all()
     serializer_class = PromotionsSerializer
     lookup_field = 'name'
 
 
-class PromotionsUpdateApi(DestroyAPIView):
+class PromotionsDeleteApi(DestroyAPIView):
     queryset = Promotions.objects.all()
     serializer_class = PromotionsSerializer
     lookup_field = 'name'
