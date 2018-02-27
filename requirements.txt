@@ -3,3 +3,4 @@ djangorestframework
 mysqlclient
 pytest
 pytest-django
+django-rest-swagger
