@@ -60,7 +60,7 @@ urlpatterns = [
         url(r'^api/prof_promotion/create/$', Prof_PromotionCreateApi.as_view(), name="api create eleve"),
         url(r'^api/absences_prof/create/$', Absences_ProfCreateApi.as_view(), name="api create eleve"),
         url(r'^api/cours/create/$', CoursCreateApi.as_view(), name="api create eleve"),
-        url(r'^api/promotions/create/$', PromotionsCreateApi.as_view(), name="api create eleve")
+        url(r'^api/promotions/create/$', PromotionsCreateApi.as_view(), name="api create eleve"),
         # Search
         url(r'^api/eleve/(?P<nom>[\w-]+)/$', ElevesSearchApi.as_view(), name="api eleve"),
         url(r'^api/specialite/(?P<nom>[\w-]+)/$', SpecialiteSearchApi.as_view(), name="api eleve"),
