@@ -36,7 +36,7 @@ class ElevesSearchApi(RetrieveAPIView):
     lookup_field = 'nom'
 
 
-class ElevesUpdateApi(DestroyAPIView):
+class ElevesDeleteApi(DestroyAPIView):
     queryset = Eleves.objects.all()
     serializer_class = ElevesSerializer
     lookup_field = 'nom'
